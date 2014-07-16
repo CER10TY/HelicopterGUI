@@ -3,6 +3,8 @@ class TRT_HeloGUI
 movingenable = false;
 //enablesimulation = false;
 idd = 1;
+onLoad = "HeloView_Open = true";
+onUnload = "heloView_Open = false";
 
 	class controls 
 	{
@@ -26,7 +28,6 @@ idd = 1;
 			y = -0.272727;
 			w = 1.60606;
 			h = 1.49091;
-			onMouseButtonDown = "call TRT_fnc_panCameraStart";
 		};
 		class TRT_OptionFrame: RscFrame
 		{
@@ -93,7 +94,7 @@ idd = 1;
 			idc = 2400;
 			text = "EXIT VIEWER"; //--- ToDo: Localize;
 			x = -0.621212;
-			y = 0.9;
+			y = 1.08182;
 			w = 0.151515;
 			h = 0.109091;
 			action = "closeDialog 0; HeloView_Destroy = [] call TRT_fnc_exitView";
@@ -102,8 +103,8 @@ idd = 1;
 		{
 			idc = 2401;
 			text = "SHOW VEHICLE"; //--- ToDo: Localize;
-			x = -0.621212;
-			y = 1.04545;
+			x = -0.469697;
+			y = 1.08182;
 			w = 0.151515;
 			h = 0.109091;
 			action = "HeloView_SetCam = [] spawn TRT_fnc_setCamera";

@@ -5,7 +5,7 @@ Credits to author(s) apply
 */
 
 _coord = _this select 2;
-
-HeloView_ViewCam camSetTarget _coord;
+diag_log format ["Diag: %1",_coord];
+/*
+HeloView_ViewCam camSetTarget [_coord select 0, _coord select 1, 0];
 HeloView_ViewCam camCommit 0;
-diag_log "Executing cam Target!";

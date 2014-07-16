@@ -4,6 +4,8 @@ Last Revision 2014-07-16
 Standard credits to creator apply
 */
 
+if (!isNull HeloView_newVehicle) exitWith {};
+
 HeloView_vehicle = vehicle player;
 //_pos = [(getposATL HeloView_vehicle select 0 + 100), (getposATL HeloView_vehicle select 0 + 100), 0];
 HeloView_LOGIC = createVehicle ["Land_HelipadEmpty_F",[((getposATL HeloView_vehicle select 0) + 100), ((getposATL HeloView_vehicle select 1) + 100), 2000],[],0,"NONE"];

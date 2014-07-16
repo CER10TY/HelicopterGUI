@@ -30,8 +30,3 @@ if (_posChange >= 0) then {
 	HeloView_ViewCam camSetFov HeloView_CurrentZoom - _posChange;
 	HeloView_ViewCam camCommit 0.2;
 };
-/*
-if (_posChange == 10) then {
-	HeloView_ViewCam camSetFov HeloView_CurrentZoom + _posChange;
-	HeloView_ViewCam camCommit 0.2;
-};
