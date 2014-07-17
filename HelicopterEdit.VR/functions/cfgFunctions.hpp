@@ -8,7 +8,9 @@ class TRT
 		class exitView {};
 		class rotateCamera {};
 		class zoom {};
-		class panCameraStart {};
+		class camFocusSel {};
+		class selections {};
+		class camoSel {};
 	};
 };
 };

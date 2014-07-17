@@ -3,7 +3,7 @@ class TRT_HeloGUI
 movingenable = false;
 //enablesimulation = false;
 idd = 1;
-onLoad = "HeloView_Open = true";
+onLoad = "HeloView_Open = true; HeloView_SetCam = [] spawn TRT_fnc_setCamera";
 onUnload = "heloView_Open = false";
 
 	class controls 
@@ -45,6 +45,7 @@ onUnload = "heloView_Open = false";
 			y = -0.118182;
 			w = 0.272727;
 			h = 0.181818;
+			onLBSelChanged = "_this call TRT_fnc_camoSel";
 		};
 		class TRT_TextInfoCamo: RscText
 		{
@@ -99,16 +100,6 @@ onUnload = "heloView_Open = false";
 			h = 0.109091;
 			action = "closeDialog 0; HeloView_Destroy = [] call TRT_fnc_exitView";
 		};
-		class TRT_BtnShow: RscButtonMenu
-		{
-			idc = 2401;
-			text = "SHOW VEHICLE"; //--- ToDo: Localize;
-			x = -0.469697;
-			y = 1.08182;
-			w = 0.151515;
-			h = 0.109091;
-			action = "HeloView_SetCam = [] spawn TRT_fnc_setCamera";
-		};
 		class TRT_BtnRotate: RscButtonMenu
 		{
 			idc = 2402;
@@ -136,6 +127,24 @@ onUnload = "heloView_Open = false";
 			y = 0.936364;
 			w = 0.181818;
 			h = 0.0363636;
+		};
+		class TRT_InfoCameraText: RscText
+		{
+			idc = 1004;
+			text = "Camera Focus"; //--- ToDo: Localize;
+			x = -0.621212;
+			y = 0.681818;
+			w = 0.272727;
+			h = 0.0363636;
+		};
+		class TRT_LBCamFocus: RscListbox
+		{
+			idc = 1503;
+			x = -0.621212;
+			y = 0.754545;
+			w = 0.272727;
+			h = 0.181818;
+			onLBSelChanged = "_this call TRT_fnc_camFocusSel";
 		};
 		////////////////////////////////////////////////////////
 		// GUI EDITOR OUTPUT END

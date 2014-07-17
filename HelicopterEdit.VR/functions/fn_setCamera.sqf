@@ -21,9 +21,10 @@ HeloView_ViewCam = "camera" camCreate HeloView_newPos;
 HeloView_ViewCam cameraEffect ["internal", "back"];
 showCinemaBorder false;
 HeloView_ViewCam camSetTarget HeloView_newVehicle;
-HeloView_ViewCam camSetPos [(HeloView_newPos select 0), ((HeloView_newPos select 1) + 6), ((HeloView_newPos select 2) + 2)];
-HeloView_Viewcam camSetFov 2;
-HeloView_Viewcam camCommit 0;
+HeloView_ViewCam camSetPos [(HeloView_newPos select 0), ((HeloView_newPos select 1) + 20), ((HeloView_newPos select 2) + 2)];
+//HeloView_Viewcam camSetFovRange [0,10];
+HeloView_ViewCam camSetFov 0.7;
+HeloView_ViewCam camCommit 0;
 
 // Variables are simply there for zoom function used later; Todo - set and get variables so I don't have to edit them manually everytime.
 HeloView_minZoom = 0.1;

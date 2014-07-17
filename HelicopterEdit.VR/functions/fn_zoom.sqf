@@ -25,8 +25,7 @@ switch _zoomLevel do {
 */
 
 _posChange = _this select 1;
+_cameraPos = [(HeloView_newPos select 0), ((HeloView_newPos select 1) + (20 / _posChange)), ((HeloView_newPos select 2) + 2)];
 
-if (_posChange >= 0) then {
-	HeloView_ViewCam camSetFov HeloView_CurrentZoom - _posChange;
-	HeloView_ViewCam camCommit 0.2;
-};
+HeloView_ViewCam camSetPos _cameraPos;
+HeloView_ViewCam camCommit 0.2;

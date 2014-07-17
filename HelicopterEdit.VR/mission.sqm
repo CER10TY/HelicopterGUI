@@ -6,13 +6,13 @@ class Mission
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
 		"map_vr",
-		"A3_Air_F_Heli_Light_01"
+		"A3_Air_F_Beta_Heli_Attack_02"
 	};
 	addOnsAuto[]=
 	{
 		"A3_Characters_F_BLUFOR",
 		"a3_characters_f",
-		"A3_Air_F_Heli_Light_01",
+		"A3_Air_F_Beta_Heli_Attack_02",
 		"map_vr"
 	};
 	randomSeed=10468696;
@@ -64,7 +64,7 @@ class Mission
 			position[]={3983.6399,5,4288.7275};
 			id=1;
 			side="EMPTY";
-			vehicle="B_Heli_Light_01_F";
+			vehicle="O_Heli_Attack_02_black_F";
 			skill=0.60000002;
 			text="himmy";
 			init="this addAction [""Edit Loadout"",{createDialog ""TRT_HeloGUI""}];";
